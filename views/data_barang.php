@@ -125,7 +125,7 @@ if (isset($_GET['hapus'])) {
 
                     <h1 class="h3 mb-2 text-gray-800">Data Barang Bergerak</h1>
                     <p class="mb-4">Kelola stok barang, tambah manual, atau import via Excel.</p>
-
+<p>COBAAA</p>
 
                     <div class="row">
                         <div class="col-lg-12">
