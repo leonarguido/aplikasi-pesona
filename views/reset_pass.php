@@ -1,5 +1,5 @@
 <?php
-require 'config/koneksi.php';
+require '../config/koneksi.php';
 
 // Password yang kita inginkan
 $password_baru = 'admin123';
