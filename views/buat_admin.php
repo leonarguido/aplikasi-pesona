@@ -1,6 +1,6 @@
 <?php
 // File: buat_admin.php
-require 'config/koneksi.php';
+require '../config/koneksi.php';
 
 // Data akun Super Admin yang akan dibuat
 $username = "superadmin";

@@ -1,10 +1,10 @@
 <?php
 session_start();
-require 'config/koneksi.php';
+require '../config/koneksi.php';
 
 // Jika sudah login, lempar ke index
 if (isset($_SESSION['user_id'])) {
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit;
 }
 
@@ -41,7 +41,7 @@ if (isset($_POST['login'])) {
             }
 
             // Login Sukses
-            header("Location: index.php");
+            header("Location: ../index.php");
             exit;
         }
     }
@@ -50,13 +50,12 @@ if (isset($_POST['login'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login - Aplikasi Pesona</title>
-    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+  <?php 
+    require 'layout/header.php';
+    ?>
 </head>
 <body class="bg-gradient-primary">
     <div class="container">
@@ -124,9 +123,9 @@ if (isset($_POST['login'])) {
     }
     </script>
 
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="assets/js/sb-admin-2.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/vendor/jquery/jquery.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="<?= BASE_URL ?>assets/js/sb-admin-2.min.js"></script>
 </body>
 </html>

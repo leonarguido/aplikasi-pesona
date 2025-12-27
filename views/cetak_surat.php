@@ -1,9 +1,9 @@
 <?php
 session_start();
-require 'config/koneksi.php';
+require '../config/koneksi.php';
 
 if (!isset($_SESSION['user_id']) || !isset($_GET['id'])) {
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit;
 }
 
@@ -103,7 +103,7 @@ if ($data['status'] != 'disetujui') {
         <div class="ttd-box">
             <p>Pemohon,</p>
             <?php if(!empty($data['ttd_pemohon']) && file_exists('assets/img/ttd/'.$data['ttd_pemohon'])): ?>
-                <img src="assets/img/ttd/<?= $data['ttd_pemohon']; ?>" class="img-ttd">
+                <img src="<?= BASE_URL ?>assets/img/ttd/<?= $data['ttd_pemohon']; ?>" class="img-ttd">
             <?php else: ?>
                 <br><br><br><br>
                 <small>(Belum Upload TTD)</small><br>
@@ -114,7 +114,7 @@ if ($data['status'] != 'disetujui') {
         <div class="ttd-box">
             <p>Disetujui Oleh,<br>Admin Gudang</p>
             <?php if(!empty($data['ttd_admin']) && file_exists('assets/img/ttd/'.$data['ttd_admin'])): ?>
-                <img src="assets/img/ttd/<?= $data['ttd_admin']; ?>" class="img-ttd">
+                <img src="<?= BASE_URL ?>assets/img/ttd/<?= $data['ttd_admin']; ?>" class="img-ttd">
             <?php else: ?>
                 <br><br><br><br>
                 <small>(Belum Upload TTD)</small><br>
